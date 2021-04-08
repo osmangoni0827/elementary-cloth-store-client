@@ -8,11 +8,15 @@ const  ManageProducts= () => {
         fetch('https://arcane-depths-74989.herokuapp.com/products')
         .then(res=>res.json())
         .then(data=>setproducts(data))
-    },[])
+    },[products])
     const HandleDeleteProduct=(id)=>{
         fetch('https://arcane-depths-74989.herokuapp.com/deleteProduct/'+id)
         .then(res=>res.json())
-        .then(data=>console.log(data))
+        .then(data=>{
+            if(data){
+                products.length=products.length-1;
+            }
+        })
     }
     return (
         <div className='manageProduct'>
