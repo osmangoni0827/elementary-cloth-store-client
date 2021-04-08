@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Products from '../Products/Products';
+import Progress from '../Progress/Progress';
 import './Home.css';
 const Home = () => {
+    const [products,setproducts]=useState([])
+    useEffect(()=>{
+        fetch('http://localhost:4100/products')
+        .then(res=>res.json())
+        .then(data=>setproducts(data))
+    },[])
     return (
         <div className='row home'>
-                <Products></Products>
-                <Products></Products>
-                <Products></Products>
-                <Products></Products>
+            {
+            products.length?products.map(pd=><Products data={pd}></Products>):<Progress></Progress>
+            }
         </div>
     );
 };

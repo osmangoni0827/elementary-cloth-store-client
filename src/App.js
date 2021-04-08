@@ -14,12 +14,12 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import CheckOut from './components/CheckOut/CheckOut';
 import Order from './components/Order/Order';
 import Admin from './components/Admin/Admin';
-
 export const LogedInContext=createContext();
 function App() {
   const [LogedInUser,setLogedInuser]=useState({})
   return (
-    <LogedInContext.Provider value={[LogedInUser,setLogedInuser]} className='AppStyle'>
+    <div>
+        <LogedInContext.Provider value={[LogedInUser,setLogedInuser]}>
   <Router>
      <Header></Header>
       <Switch>
@@ -32,22 +32,23 @@ function App() {
           <Route path="/login">
           <LogIn></LogIn>
           </Route>
-          <Route path="/checkout/:id">
+          <PrivateRoute path="/checkout/:id">
             <CheckOut></CheckOut>
-          </Route>
-          <Route path="/checkout">
+          </PrivateRoute>
+          <PrivateRoute path="/checkout">
             <CheckOut></CheckOut>
-          </Route>
-          <Route path="/admin">
+          </PrivateRoute>
+          <PrivateRoute path="/admin">
             <Admin></Admin>
-          </Route>
-          <Route path="/order">
+          </PrivateRoute>
+          <PrivateRoute path="/order">
             <Order></Order>
-          </Route>
+          </PrivateRoute>
         </Switch>
    </Router>
     </LogedInContext.Provider>
-   
+    </div>
+    
   );
 }
 

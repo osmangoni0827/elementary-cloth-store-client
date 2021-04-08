@@ -12,22 +12,24 @@ const Admin = () => {
         if(state=='add'){
             const Operation={...adminOperation};
             Operation.add=true;
+            Operation.manage=false;
             setAdminOperation(Operation);
         }
         else if(state=='manage'){
             const Operation={...adminOperation};
             Operation.manage=true;
+            Operation.add=false;
             setAdminOperation(Operation);
         }
     }
     return (
         <div className='admin row'>
-            <div className='asideNav col-md-4 col-12'>
+            <div className='asideNav col-md-3 col-12'>
                 <Link to='' onClick={()=>HandleAdminOperation('add')}><h4>Add Product</h4></Link><br/>
                 <Link to='' onClick={()=>HandleAdminOperation('manage')} ><h4>Manage Product</h4></Link><br/>
                 <Link to='' onClick={()=>HandleAdminOperation('edit')}><h4>Edit</h4></Link>
             </div>
-            <div className='asideDetail col-md-8 col-12'>
+            <div className='asideDetail col-md-9 col-12'>
                 {
                    adminOperation.add&&<div><AddProduct></AddProduct></div>
                 }

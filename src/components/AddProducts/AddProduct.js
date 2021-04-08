@@ -11,7 +11,7 @@ const AddProduct = () => {
         imgUrl:imgurl,name:name,price:price
       }
       //Add Product using fetch by post
-      fetch('/addProduct',{
+      fetch('http://localhost:4100/addProduct',{
             method: "POST",
         headers: {
           "Content-Type": "application/json"

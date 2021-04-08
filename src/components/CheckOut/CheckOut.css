@@ -1,6 +1,6 @@
 .checkoutProduct{
 
-    width: 700px;
+    width: 800px;
     margin: 50px auto;
     padding: 10px;
     background-color: rgb(243, 240, 236);
@@ -18,11 +18,14 @@ table{
     margin: 10px auto;
 }
 
-tr,th,td{
+tr td{
     text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+
 }
 tr th{
-    font-size: 25px;
-    border: 2px solid black;
+    font-size: 20px;
+    border: 1px solid black;
     padding: 10px;
 }
