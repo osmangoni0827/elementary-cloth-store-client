@@ -1,0 +1,17 @@
+.Cards{
+    width: 250px;
+    background-color: #301405;
+    margin: 15px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    color: rgb(252, 249, 249);
+}
+button{
+    cursor: pointer;
+}
+.Cards img{
+    width: 80%;
+    height: 150px;
+    margin: 10px auto;
+}

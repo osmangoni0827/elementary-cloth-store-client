@@ -1,0 +1,28 @@
+.checkoutProduct{
+
+    width: 700px;
+    margin: 50px auto;
+    padding: 10px;
+    background-color: rgb(243, 240, 236);
+    border: 2px solid wheat;
+}
+.checkoutProduct button{
+    margin-top: 10px;
+    font-size: 22px;
+    display: block;
+    margin: 0px auto;
+     
+}
+table{
+    width: 100%;
+    margin: 10px auto;
+}
+
+tr,th,td{
+    text-align: center;
+}
+tr th{
+    font-size: 25px;
+    border: 2px solid black;
+    padding: 10px;
+}
