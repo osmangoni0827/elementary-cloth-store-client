@@ -1,0 +1,12 @@
+.addproduct{
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+}
+.addproduct input{
+    width: 300px;
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid rgb(136, 125, 125);
+}

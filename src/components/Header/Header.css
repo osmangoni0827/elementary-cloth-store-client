@@ -4,3 +4,7 @@ li{
     margin-right: 10px;
     color: #000000;
 }
+li:hover{
+    background-color: rgb(235, 227, 227);
+    border-radius: 5px;
+}

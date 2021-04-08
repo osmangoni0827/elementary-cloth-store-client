@@ -12,8 +12,10 @@ table{
 tr,th,td{
     text-align: center;
 }
-tr th{
+.manageProduct table thead tr th{
     font-size: 25px;
-    border: 2px solid black;
+    text-align: center;
+    color: cornsilk;
+    border: 2px solid rgb(24, 23, 23);
     padding: 10px;
 }

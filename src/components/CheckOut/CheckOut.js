@@ -8,7 +8,7 @@ const CheckOut = () => {
     const {id}=useParams();
     const[products,setproducts]=useState({});
     useEffect(()=>{
-        fetch('http://localhost:4100/productbykey/'+id)
+        fetch('https://arcane-depths-74989.herokuapp.com/productbykey/'+id)
         .then(res=>res.json())
         .then(data=>setproducts(data))
     },[])
@@ -16,7 +16,7 @@ const CheckOut = () => {
     const HandleCheckOut=()=>{
         const NewOrderdata={name,price,imgUrl}
         const NewOrder={...LogedInUser,ProductData:NewOrderdata,OrderDate:new Date().toDateString('dd/MM/yyyy')}
-        fetch('http://localhost:4100/addOrder',{
+        fetch('https://arcane-depths-74989.herokuapp.com/addOrder',{
             method:'POST',
             headers: {
                 "Content-Type": "application/json"

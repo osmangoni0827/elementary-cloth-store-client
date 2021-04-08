@@ -19,10 +19,10 @@ tr td{
     border: 1px solid rgb(61, 59, 59);
     text-align: center;
 }
-tr th{
+ tr th{
     font-size: 25px;
     border: 2px solid black;
     padding: 10px;
-    color: #30B9EE;
+    color: #151616;
     text-align: center;
 }

@@ -25,9 +25,12 @@ const Admin = () => {
     return (
         <div className='admin row'>
             <div className='asideNav col-md-3 col-12'>
-                <Link to='' onClick={()=>HandleAdminOperation('add')}><h4>Add Product</h4></Link><br/>
-                <Link to='' onClick={()=>HandleAdminOperation('manage')} ><h4>Manage Product</h4></Link><br/>
-                <Link to='' onClick={()=>HandleAdminOperation('edit')}><h4>Edit</h4></Link>
+                <div style={{height:'600px'}}>
+                <button type="button" className="btn btn-primary btn-lg btn-block" onClick={()=>HandleAdminOperation('add')}><h4>Add Product</h4></button><br/>
+                <button type="button" className="btn btn-primary btn-lg btn-block" onClick={()=>HandleAdminOperation('manage')} ><h4>Manage Product</h4></button><br/>
+                <button type="button" className="btn btn-primary btn-lg btn-block" onClick={()=>HandleAdminOperation('edit')}><h4>Edit</h4></button>
+                </div>
+               
             </div>
             <div className='asideDetail col-md-9 col-12'>
                 {

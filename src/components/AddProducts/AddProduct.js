@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-
+import './addproduct.css';
 const AddProduct = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [imgurl,setimgurl]=useState('');
@@ -11,7 +11,7 @@ const AddProduct = () => {
         imgUrl:imgurl,name:name,price:price
       }
       //Add Product using fetch by post
-      fetch('http://localhost:4100/addProduct',{
+      fetch('https://arcane-depths-74989.herokuapp.com/addProduct',{
             method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -39,18 +39,20 @@ const AddProduct = () => {
     .catch(err=>console.log(err))
   }
     return (
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <div className='addproduct'>
+          <form onSubmit={handleSubmit(onSubmit)}>
          
-                <h5>Name</h5>
-                <input type='text' name='name' {...register("name",{ required: true })} />
-                <p>{errors.name && <span>This field is required</span>}</p>
-               <h5>Add Price: </h5>
-                <input type='number' name='price' {...register("price",{ required: true } )} />
-                <p>{errors.price && <span>This field is required</span>}</p>
-                <h5>Add Picture:</h5>
-                <input type='file' onChange={HandleAddPicture}></input><br/><br/>
-                 <input type="submit" value='Submit' />
-      </form>
+         <h5>Name:</h5>
+         <input type='text' name='name' {...register("name",{ required: true })} />
+         <p>{errors.name && <span>This field is required</span>}</p>
+        <h5>Add Price: </h5>
+         <input type='number' name='price' {...register("price",{ required: true } )} />
+         <p>{errors.price && <span>This field is required</span>}</p>
+         <h5>Add Picture:</h5>
+         <input type='file' onChange={HandleAddPicture}></input><br/><br/>
+          <input type="submit"className='btn btn-info' value='Submit' />
+</form>
+      </div>
     );
 };
 

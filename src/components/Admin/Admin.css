@@ -5,15 +5,18 @@
 .asideNav{
     width: 100%;
     padding: 15px;
-    background-color: burlywood;
+    color: cornsilk;
+    background-color: rgb(56, 42, 24);
 }
 .asideNav h4{
     margin-left: 10px;
     cursor: pointer;
 }
+.asideNav button{
+    padding: 5px;
+}
 .asideDetail{
-    color: white;
     width: 100%;
-    padding: 15px;
-    background-color: rgb(83, 81, 78);
+    background-color: burlywood;
+    color: rgb(19, 18, 18); 
 }

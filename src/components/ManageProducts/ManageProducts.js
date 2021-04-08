@@ -5,12 +5,12 @@ const  ManageProducts= () => {
 
     const [products,setproducts]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:4100/products')
+        fetch('https://arcane-depths-74989.herokuapp.com/products')
         .then(res=>res.json())
         .then(data=>setproducts(data))
     },[])
     const HandleDeleteProduct=(id)=>{
-        fetch('http://localhost:4100/deleteProduct/'+id)
+        fetch('https://arcane-depths-74989.herokuapp.com/deleteProduct/'+id)
         .then(res=>res.json())
         .then(data=>console.log(data))
     }
