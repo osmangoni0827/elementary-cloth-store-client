@@ -13,7 +13,9 @@ const  ManageProducts= () => {
         fetch('https://arcane-depths-74989.herokuapp.com/deleteProduct/'+id)
         .then(res=>res.json())
         .then(data=>{
+            if(data){
                 products.length=products.length-1;
+            }    
         })
     }
     return (
