@@ -11,8 +11,8 @@ const Products = (profs) => {
     return (
             <div className='col-md-3 col-12 Cards'>
                 <img src={imgUrl} alt=''></img>
-                <h5>{name}</h5>
-                <div className='d-flex align-items-center justify-content-between '>
+                <h5 className='text-center'>{name}</h5>
+                <div className='d-flex align-items-center justify-content-between p-5'>
                 <h6>${price}</h6>
                 <button className='btn btn-primary' onClick={()=>HandleBuyButton(_id)}>Buy Now</button>
                 </div>
